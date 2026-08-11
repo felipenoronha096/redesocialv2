@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar Perfil</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container" id="telaCriar">
+
+        <h1>Criar Perfil</h1>
+
+        <div class="imagem-area" id="dropArea">
+
+            <input
+                type="file"
+                id="imagem"
+                accept="image/*"
+                hidden
+            >
+
+            <img
+                id="preview"
+                class="preview"
+                alt="Preview da imagem"
+            >
+
+            <div id="uploadTexto">
+                <span>📷</span>
+
+                <strong>
+                    Arraste sua foto aqui
+                </strong>
+
+                <small>
+                    ou clique para escolher
+                </small>
+            </div>
+
+        </div>
+
+        <input
+            type="text"
+            id="nome"
+            placeholder="Digite seu nome"
+        >
+
+        <button id="botaoEnviar">
+            Enviar
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
