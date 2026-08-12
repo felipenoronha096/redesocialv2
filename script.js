@@ -22,7 +22,7 @@ button.addEventListener("click", () => {
 })
 
 async function enviar() {
-    const novoUsuario = { nome: pedro, url: url_imagem}};
+    const novoUsuario = { nome: pedro, url: url_imagem};
 
     const resposta = await fetch('http://localhost:3000', {
     method: 'POST',
