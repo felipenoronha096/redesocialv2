@@ -3,61 +3,148 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Criar Perfil</title>
+    <title>Cadastro de Usuário</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #fff0f5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+
+            padding: 30px;
+
+            background-color: white;
+
+            border: 2px solid #ff66b2;
+            border-radius: 15px;
+
+            box-shadow: 0 4px 15px rgba(214, 51, 132, 0.2);
+        }
+
+        h1 {
+            margin-top: 0;
+
+            text-align: center;
+
+            color: #d63384;
+        }
+
+        .campo {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #d63384;
+
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+
+            padding: 10px;
+
+            border: 1px solid #ff66b2;
+            border-radius: 8px;
+
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+
+            border-color: #d63384;
+
+            box-shadow: 0 0 5px rgba(214, 51, 132, 0.3);
+        }
+
+        button {
+            width: 100%;
+
+            padding: 12px;
+
+            border: none;
+            border-radius: 8px;
+
+            background-color: #d63384;
+
+            color: white;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #b52269;
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="container" id="telaCriar">
+    <div class="container">
 
-        <h1>Criar Perfil</h1>
+        <h1>🌸 Cadastro</h1>
 
-        <div class="imagem-area" id="dropArea">
+        <div class="campo">
+
+            <label for="nome">
+                Nome do usuário:
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+            >
+
+        </div>
+
+        <div class="campo">
+
+            <label for="meu-upload">
+                Escolha uma imagem:
+            </label>
 
             <input
                 type="file"
                 id="meu-upload"
                 accept="image/*"
-                hidden
             >
-
-            <img
-                id="preview"
-                class="preview"
-                alt="Preview da imagem"
-            >
-
-            <div id="uploadTexto">
-                <span>📷</span>
-
-                <strong>
-                    Arraste sua foto aqui
-                </strong>
-
-                <small>
-                    ou clique para escolher
-                </small>
-            </div>
 
         </div>
 
-        <input
-            type="text"
-            id="nome"
-            placeholder="Digite seu nome"
-        >
-
-        <button id="botaoEnviar">
-            Enviar
+        <button id="btn">
+            Salvar Usuário
         </button>
 
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 
