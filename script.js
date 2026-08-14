@@ -10,9 +10,10 @@ inputUpload.addEventListener('change', function(event) {
     if (arquivo) {
         url_imagem = arquivo.name
         console.log(url_imagem)
+    } else{
+        console.log("Nenhum arquivo selecionado.")
     }
 })
-
 
 const inputNome = document.getElementById("nome")
 const button = document.getElementById("btn")
@@ -21,15 +22,15 @@ button.addEventListener("click", () => {
     nome = inputNome.value
 })
 
-async function enviar() {
-    const novoUsuario = { nome: pedro, url: url_imagem};
+async function criar() {
+    const novo = { "nome": nome, "url": url_imagem};
 
     const resposta = await fetch('http://localhost:3000', {
     method: 'POST',
     headers: {
-        'content-type': "application/json"
+        'Content-Type': "application/json"
     },
-    body: JSON.stringify(novoUsuario)
+    body: JSON.stringify(novo)
     });
 
     const resultado = await resposta.json();
