@@ -1,7 +1,9 @@
+var url_imagem = "";
+var nome = "";
+
+
 const inputUpload = document.getElementById("meu-upload");
 
-var nome = "";
-var url_imagem = "";
 
 inputUpload.addEventListener('change', function(event) {
     
